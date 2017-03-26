@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+
+.btn {
+  background: #e6e9eb;
+  background-image: -webkit-linear-gradient(top, #e6e9eb, #afb6ba);
+  background-image: -moz-linear-gradient(top, #e6e9eb, #afb6ba);
+  background-image: -ms-linear-gradient(top, #e6e9eb, #afb6ba);
+  background-image: -o-linear-gradient(top, #e6e9eb, #afb6ba);
+  background-image: linear-gradient(to bottom, #e6e9eb, #afb6ba);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+  display: table;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background: #888b8c;
+  background-image: -webkit-linear-gradient(top, #888b8c, #060a0d);
+  background-image: -moz-linear-gradient(top, #888b8c, #060a0d);
+  background-image: -ms-linear-gradient(top, #888b8c, #060a0d);
+  background-image: -o-linear-gradient(top, #888b8c, #060a0d);
+  background-image: linear-gradient(to bottom, #888b8c, #060a0d);
+  text-decoration: none;
+}
+
+.image {
+	max-width: 80%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border: 2px solid black;
+	
+}

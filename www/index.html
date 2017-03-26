@@ -1,22 +1,54 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <h1>hello phonegap</h1>
-        <h2> I can't believe it's this simple. ... </h2>
-        <div id="connectionStatus" style="color:blue">Not connected to phonegap!</div>
-        <script src="cordova.js"></script>
-        <script>
-            var phonegapReady = function(){
-                oStatus = document.getElementById("connectionStatus");
-                oStatus.innerHTML = "Now connected to phonegap";
-                oStatus.style.color = "green";
-            }
+  <head>
+    <meta charset="utf-8">
 
-            document.addEventListener("deviceready", phonegapReady, false);
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
 
-        </script>
-    </body>
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="main" ng-init="getNewQuote()" >
+
+    <ion-pane style="background-color:{{color}}" >
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">Random Quotes</h1>
+      </ion-header-bar>
+      <ion-content has-header="true" padding="true">
+      <div >
+      <h3 class="quote"><blockquote>{{quote}}</blockquote></h3>
+     <h3 class="author" align="right">-{{auth}}</h3>
+      <img src="{{current.file}}" class="image"/>
+      </div>
+      </ion-content>
+      <ion-footer-bar class="bar-dark">
+      <a class="btn" ng-click="getNewQuote()">Next Quote</a>
+      </ion-footer-bar>
+    </ion-pane>
+  </body>
 </html>
